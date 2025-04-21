@@ -1,6 +1,6 @@
 baseURL = "https://usdt2xmr.com/"
 languageCode = "en-us"
-title = "Buy XMR for USDT"
+title = "USDT to XMR"
 theme = "PaperMod"
 
 # Enable features
@@ -33,7 +33,7 @@ home = ["HTML", "RSS", "JSON"]
 [params]
 keywords = ["$2"]
 env = "production"
-title = "Buy XMR for USDT"
+title = "USDT to XMR"
 description = "Buy and sell crypto"
 author = "Emma Monday"
 copyright = "© 2025 AI Log Lake"
@@ -57,13 +57,13 @@ tocopen = false
 # Schema settings
 [params.schema]
 type = "Organization"
-name = "Buy XMR for USDT"
+name = "USDT to XMR"
 url = "https://usdt2xmr.com/"
 logo = "/images/logo.png"
 description = "Buy and sell crypto"
 
 [params.homeInfoParams]
-Title = "Buy XMR for USDT"
+Title = "USDT to XMR"
 Content = "Buy and sell crypto"
 [params.fuseOpts]
 isCaseSensitive = false
