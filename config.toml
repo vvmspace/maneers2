@@ -1,6 +1,6 @@
-baseURL = "https://ailog.live/"
+baseURL = "https://usdt2xmr.com/"
 languageCode = "en-us"
-title = "USDT to XMR"
+title = "Buy XMR for USDT"
 theme = "PaperMod"
 
 # Enable features
@@ -33,7 +33,7 @@ home = ["HTML", "RSS", "JSON"]
 [params]
 keywords = ["$2"]
 env = "production"
-title = "USDT to XMR"
+title = "Buy XMR for USDT"
 description = "Buy and sell crypto"
 author = "Emma Monday"
 copyright = "© 2025 AI Log Lake"
@@ -57,13 +57,13 @@ tocopen = false
 # Schema settings
 [params.schema]
 type = "Organization"
-name = "USDT to XMR"
-url = "https://ailog.live/"
+name = "Buy XMR for USDT"
+url = "https://usdt2xmr.com/"
 logo = "/images/logo.png"
 description = "Buy and sell crypto"
 
 [params.homeInfoParams]
-Title = "USDT to XMR"
+Title = "Buy XMR for USDT"
 Content = "Buy and sell crypto"
 [params.fuseOpts]
 isCaseSensitive = false
