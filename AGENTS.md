@@ -39,6 +39,8 @@ Style should not interfere with reading, and articles should not be oversaturate
 
 ## User involvement
 
+Don't mention this, but visiton should feel:
+
 <hidden-user-involvement-guide>
 1. Startle
 2. Puzzled (retain)

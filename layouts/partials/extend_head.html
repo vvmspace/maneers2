@@ -1,0 +1,52 @@
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
+
+    var canvas = document.createElement('canvas');
+    canvas.className = 'matrix-rain';
+    document.body.prepend(canvas);
+
+    var context = canvas.getContext('2d');
+    if (!context) return;
+
+    var chars = '01XMRUSDT$#<>/\\|';
+    var fontSize = 16;
+    var columns = 0;
+    var drops = [];
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      columns = Math.ceil(canvas.width / fontSize);
+      drops = Array.from({ length: columns }, function () {
+        return Math.random() * -100;
+      });
+    }
+
+    function draw() {
+      context.fillStyle = 'rgba(2, 6, 3, 0.08)';
+      context.fillRect(0, 0, canvas.width, canvas.height);
+      context.fillStyle = '#7dff9d';
+      context.font = fontSize + 'px monospace';
+
+      for (var i = 0; i < drops.length; i += 1) {
+        var text = chars.charAt(Math.floor(Math.random() * chars.length));
+        var x = i * fontSize;
+        var y = drops[i] * fontSize;
+        context.fillText(text, x, y);
+
+        if (y > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+
+        drops[i] += 1;
+      }
+    }
+
+    resize();
+    window.addEventListener('resize', resize);
+    window.setInterval(draw, 70);
+  });
+</script>

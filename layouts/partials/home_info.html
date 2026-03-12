@@ -1,10 +1,16 @@
 {{- with site.Params.homeInfoParams }}
 <article class="first-entry home-info">
+    <div class="matrix-kicker">Signal Acquired</div>
     <header class="entry-header">
         <h1>{{ .Title | markdownify }}</h1>
     </header>
     <div class="entry-content">
         {{ .Content | markdownify }}
     </div>
+    <div class="matrix-meta">
+        <span>Privacy Layer: XMR</span>
+        <span>Liquidity Rail: USDT</span>
+        <span>Status: Live</span>
+    </div>
 </article>
-{{- end }} 
+{{- end }}
