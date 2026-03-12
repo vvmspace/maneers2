@@ -12,7 +12,7 @@
     if (!context) return;
 
     var chars = '01XMRUSDT$#<>/\\|';
-    var fontSize = 16;
+    var fontSize = 18;
     var columns = 0;
     var drops = [];
 
@@ -26,9 +26,9 @@
     }
 
     function draw() {
-      context.fillStyle = 'rgba(2, 6, 3, 0.08)';
+      context.fillStyle = 'rgba(2, 6, 3, 0.14)';
       context.fillRect(0, 0, canvas.width, canvas.height);
-      context.fillStyle = '#7dff9d';
+      context.fillStyle = 'rgba(125, 255, 157, 0.58)';
       context.font = fontSize + 'px monospace';
 
       for (var i = 0; i < drops.length; i += 1) {
@@ -47,6 +47,6 @@
 
     resize();
     window.addEventListener('resize', resize);
-    window.setInterval(draw, 70);
+    window.setInterval(draw, 110);
   });
 </script>
