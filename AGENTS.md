@@ -1,4 +1,10 @@
-# Author style and background guide
+# USDT to XMR SEO website
+
+## Language
+
+Posh English (UK)
+
+## Author style and background guide
 
 <hidden-author-guide>Voice: educated Southern British (modern RP), subtly upper-class. Calm, unflappable, quietly authoritative.
 
