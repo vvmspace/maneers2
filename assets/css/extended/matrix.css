@@ -1,24 +1,23 @@
 :root {
-    --theme: #030805;
-    --entry: rgba(5, 16, 10, 0.88);
-    --primary: #b7f7c8;
-    --secondary: #78a88a;
-    --tertiary: rgba(20, 48, 30, 0.78);
-    --content: #deefe3;
-    --code-block-bg: #021109;
-    --code-bg: rgba(7, 23, 14, 0.9);
-    --border: rgba(101, 214, 139, 0.16);
-    --matrix-glow: rgba(105, 255, 150, 0.14);
-    --matrix-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
-    --radius: 14px;
+    --theme: #000000;
+    --entry: rgba(0, 15, 0, 0.9);
+    --primary: #00ff41;
+    --secondary: #008f11;
+    --tertiary: rgba(0, 30, 0, 0.8);
+    --content: #00ff41;
+    --code-block-bg: #000500;
+    --code-bg: rgba(0, 20, 0, 0.9);
+    --border: rgba(0, 255, 65, 0.3);
+    --matrix-glow: rgba(0, 255, 65, 0.2);
+    --matrix-shadow: 0 0 15px rgba(0, 255, 65, 0.15);
+    --radius: 0px;
 }
 
 body {
     color: var(--content);
-    background:
-        radial-gradient(circle at top, rgba(57, 255, 126, 0.07), transparent 28%),
-        linear-gradient(180deg, #020503 0%, #04110a 45%, #010402 100%);
-    text-shadow: none;
+    background: #000000;
+    font-family: "Courier New", Courier, monospace;
+    text-shadow: 0 0 4px rgba(0, 255, 65, 0.4);
 }
 
 body::before {
@@ -102,11 +101,10 @@ a:hover {
 .pagination a,
 .toc,
 pre,
-div.highlight,
-.exchange-widget-container {
+div.highlight {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(180deg, rgba(8, 24, 15, 0.92), rgba(3, 10, 6, 0.97));
+    background: rgba(0, 10, 0, 0.9);
     border: 1px solid var(--border);
     box-shadow: var(--matrix-shadow);
 }
@@ -144,6 +142,7 @@ div.highlight,
     line-height: 1.05;
     text-transform: uppercase;
     letter-spacing: 0.03em;
+    font-family: "Courier New", Courier, monospace;
 }
 
 .post-title,
@@ -226,7 +225,8 @@ div.highlight,
 .post-content code,
 .post-content pre code,
 code {
-    color: #bfffd0;
+    color: #00ff41;
+    font-family: "Courier New", Courier, monospace;
 }
 
 .post-content blockquote {
@@ -235,9 +235,10 @@ code {
 }
 
 .pagination a {
-    color: #021109;
-    background: linear-gradient(90deg, #7ae99c, #b7ffca);
-    box-shadow: 0 0 14px rgba(105, 255, 150, 0.14);
+    color: #000000;
+    background: #008f11;
+    box-shadow: 0 0 14px rgba(0, 255, 65, 0.2);
+    font-weight: bold;
 }
 
 .footer {
@@ -253,15 +254,50 @@ code {
 }
 
 .exchange-widget-container {
-    padding: 18px;
+    padding: 24px;
     border-radius: var(--radius);
+    background: #000000;
+    border: 1px solid #008f11;
+    box-shadow: 0 0 15px rgba(0, 143, 17, 0.4), inset 0 0 20px rgba(0, 143, 17, 0.2);
+    position: relative;
+    overflow: hidden;
+    animation: neon-pulse 3s infinite alternate;
+}
+
+@keyframes neon-pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 143, 17, 0.3), inset 0 0 15px rgba(0, 143, 17, 0.1);
+        border-color: rgba(0, 143, 17, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 25px rgba(0, 143, 17, 0.7), inset 0 0 30px rgba(0, 143, 17, 0.4);
+        border-color: rgba(0, 255, 65, 0.9);
+    }
+}
+
+.exchange-widget-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.15) 0px,
+        rgba(0, 0, 0, 0.15) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+    z-index: 2;
 }
 
 .exchange-widget-container iframe {
     position: relative;
     z-index: 1;
-    border-radius: 10px;
-    filter: hue-rotate(24deg) saturate(0.88) contrast(1.03) brightness(0.98);
+    border-radius: 8px;
+    filter: hue-rotate(15deg) contrast(1.15) brightness(0.9) brightness(1.1) drop-shadow(0 0 5px rgba(0, 255, 65, 0.2));
 }
 
 .matrix-rain {
